@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  background-color: rgb(244, 212, 212);
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+}
+
+.logo {
+  color: rgb(0, 171, 45);
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+nav a {
+  color: rgb(0, 171, 45);
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+}
+
+nav a:hover {
+  color: rgb(25, 0, 169);
+  opacity: 0.85;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.content {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+}
+
+.content .header {
+  color: white;
+  width: 40%;
+  font-weight: 600;
+  margin-left: 100px;
+}
+
+h2 {
+  -webkit-text-stroke: black 2px;
+  -webkit-text-fill-color: red;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: translate(0, -20px);
+}
+
+.content a {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  transform: translate(-500px, 150px);
+}
+
+.content .image {
+  width: 30%;
+}
+
+.content .image .img {
+  width: 180px;
+  height: 500px;
+}
+
+.icons {
+  position: absolute;
+  bottom: 20px;
+  transform: translate(700px, 0);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icons img {
+  width: 40px;
+  transition: ease 0.5s;
+  box-shadow: 0 0 30px 5px rgb(232, 0, 253);
+  margin-right: 10px;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+.content a:hover {
+  opacity: 0.8;
+  box-shadow: inset 0 0 2px 2px black;
+}
+
+.header .imge {
+  transform: translate(-50px, -30px);
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes change {
+  0% {
+    background-image: url("./logo.png");
+    background-size: cover;
+  }
+  35% {
+    background-image: url("./h.png");
+    background-size: cover;
+  }
+  60% {
+    background-image: url("./s.jpeg");
+    background-size: cover;
+  }
+  85% {
+    background-image: url("./op.jpeg");
+    background-size: cover;
+  }
+  100% {
+    background-image: url("./mi.png");
+    background-size: cover;
+  }
+}
+
+.header .imge:hover {
+  animation-play-state: paused;
+}
